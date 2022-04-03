@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE recipe SYSTEM "file:/C:/Users/ivanm/Desktop/EP2T_2_IMB_13.dtd">
+<recipe num="1">
+  <title>Hippie Pancakes</title>
+  <recipeinfo>
+    <blurb>Socially conscious breakfast food</blurb>
+    <author>David Horton</author>
+    <yield>12 to 16 small pancakes, enough for two hippies</yield>
+    <preptime tmag="minutes">10</preptime>
+  </recipeinfo>
+  <ingredientlist>
+    <ingredient>
+      <quantity>1</quantity>
+      <unit>C</unit>
+      <fooditem>unbleached wheat blend flour</fooditem>
+    </ingredient>
+    <ingredient>
+      <quantity>2</quantity>
+      <unit>tsp</unit>
+      <fooditem>baking powder</fooditem>
+    </ingredient>
+    <ingredient>
+      <quantity>1</quantity>
+      <unit>tsp.</unit>
+      <fooditem>unrefined sugar</fooditem>
+    </ingredient>
+    <ingredient>
+      <quantity>1/4</quantity>
+      <unit>tsp</unit>
+      <fooditem>coarse kosher salt</fooditem>
+    </ingredient>
+    <ingredient>
+      <quantity>1</quantity>
+      <fooditem>free-range egg</fooditem>
+    </ingredient>
+    <ingredient>
+      <quantity>1 1/4</quantity>
+      <unit>C</unit>
+      <fooditem>hormone-free milk</fooditem>
+    </ingredient>
+    <ingredient>
+      <quantity>1</quantity>
+      <unit>tsp</unit>
+      <fooditem>organic vegetable oil</fooditem>
+    </ingredient>
+  </ingredientlist>
+  <preparation dific="easy">Pre-heat griddle over medium heat. Combine dry ingredients in a mixing
+  bowl. Stir in egg, milk and oil.</preparation>
+  <serving>Top with fruit and berries or serve with traditional maple syrup.</serving>
+  <notes>All-purpose flour may be used instead of wheat blend, but decrease
+ the milk by 1/4 C and cut the baking powder by 1/2 tsp. </notes>
+</recipe>

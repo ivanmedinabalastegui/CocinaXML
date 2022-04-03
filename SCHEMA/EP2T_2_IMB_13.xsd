@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="recipe">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="title"/>
+                <xs:element ref="recipeinfo"/>
+                <xs:element ref="ingredientlist"/>
+                <xs:element ref="preparation"/>
+                <xs:element ref="serving"/>
+                <xs:element ref="notes"/>
+            </xs:sequence>
+            <xs:attribute name="num" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="title" type="xs:string"/>
+    <xs:element name="recipeinfo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="blurb"/>
+                <xs:element ref="author"/>
+                <xs:element ref="yield"/>
+                <xs:element ref="preptime"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="blurb" type="xs:string"/>
+    <xs:element name="author" type="xs:string"/>
+    <xs:element name="yield" type="xs:string"/>
+    <xs:simpleType name="ptime">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="30"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="preptime">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="ptime">
+                    <xs:attribute name="tmag" type="xs:string" use="required"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ingredientlist">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="ingredient"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ingredient">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="quantity"/>
+                <xs:element minOccurs="0" ref="unit"/>
+                <xs:element ref="fooditem"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="quantity" type="xs:string"/>
+    <xs:element name="unit" type="xs:string"/>
+    <xs:element name="fooditem" type="xs:string"/>
+    <xs:element name="preparation">
+        <xs:complexType mixed="true">
+            <xs:attribute name="dific" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:token">
+                        <xs:enumeration value="easy"/>
+                        <xs:enumeration value="normal"/>
+                        <xs:enumeration value="hard"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="serving" type="xs:string"/>
+    <xs:element name="notes">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:minLength value="0"/>
+                <xs:maxLength value="25"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+</xs:schema>

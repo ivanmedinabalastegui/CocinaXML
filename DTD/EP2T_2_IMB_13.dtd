@@ -1,0 +1,18 @@
+<!ELEMENT recipe (title, recipeinfo, ingredientlist, preparation, serving, notes)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT recipeinfo (blurb, author, yield, preptime)>
+<!ELEMENT blurb (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT yield (#PCDATA)>
+<!ELEMENT preptime (#PCDATA)>
+<!ELEMENT ingredientlist (ingredient+)>
+<!ELEMENT ingredient (quantity, unit?, fooditem)>
+<!ELEMENT quantity (#PCDATA)>
+<!ELEMENT unit (#PCDATA)>
+<!ELEMENT fooditem (#PCDATA)>
+<!ELEMENT preparation (#PCDATA)>
+<!ELEMENT serving (#PCDATA)>
+<!ELEMENT notes (#PCDATA)>
+<!ATTLIST recipe num CDATA #REQUIRED>
+<!ATTLIST preptime tmag CDATA #IMPLIED>
+<!ATTLIST preparation dific (easy|normal|hard) #IMPLIED>
